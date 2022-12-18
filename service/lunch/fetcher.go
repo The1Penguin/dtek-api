@@ -32,6 +32,7 @@ var resturants map[string]resturant = map[string]resturant{
 	"hyllan":              {name: "Hyllan", fetcher: &KarenGQLFetcher{"a7f0f75b-c1cb-4fc3-d2a6-08d558129279"}},
 	"smak":                {name: "Smak", fetcher: &KarenGQLFetcher{"3ac68e11-bcee-425e-d2a8-08d558129279"}},
 	"linsen":              {name: "Linsen", fetcher: &KarenGQLFetcher{"b672efaf-032a-4bb8-d2a5-08d558129279"}},
+	"wijkanders":          {name: "Wijkanders", fetcher: &WijkandersFetcher{}},
 }
 
 func fetchByDate(ctx context.Context, resturant string, date time.Time, lang string) (*LunchFetchResult, error) {
